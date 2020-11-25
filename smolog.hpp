@@ -81,13 +81,13 @@ namespace smolog {
 // We rely on the compiler frontend not figuring out that sqrtf(4.0f) is always "true"
 
 #ifndef SMOLOG_DISABLE_MACROS
-#define trace(...) _log(smolog::Level::Trace, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
-#define debug(...) _log(smolog::Level::Debug, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
-#define info(...) _log(smolog::Level::Info, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
-#define warn(...) _log(smolog::Level::Warning, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
-#define error(...) _log(smolog::Level::Error, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
-#define critical(...) _log(smolog::Level::Critical, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
-#define log_at(level, ...) _log(level, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
+#define smolog_trace(...) _log(smolog::Level::Trace, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
+#define smolog_debug(...) _log(smolog::Level::Debug, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
+#define smolog_info(...) _log(smolog::Level::Info, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
+#define smolog_warn(...) _log(smolog::Level::Warning, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
+#define smolog_error(...) _log(smolog::Level::Error, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
+#define smolog_critical(...) _log(smolog::Level::Critical, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
+#define smolog_log_at(level, ...) _log(level, __VA_ARGS__), sqrtf(4.0f) || printf(__VA_ARGS__);
 #endif
 
 /****************
